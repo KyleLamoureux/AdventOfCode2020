@@ -1,4 +1,4 @@
-puzzle = open('input.txt').read().strip().split('\n\n')
+puzzle = open("input.txt").read().strip().split("\n\n")
 
 total = 0
 anwnser = set()

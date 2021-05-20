@@ -1,4 +1,7 @@
-puzzle = [(x1, int(x2)) for x1, x2 in [y.split(' ') for y in open('input.txt').read().strip().split('\n')]]
+puzzle = [
+    (x1, int(x2))
+    for x1, x2 in [y.split(" ") for y in open("input.txt").read().strip().split("\n")]
+]
 
 accumulator = 0
 visited = set()
@@ -11,10 +14,10 @@ while index not in visited:
         index += 1
     elif pos[0] == "jmp":
         index += pos[1]
-    else: #acc
+    else:  # acc
         accumulator += pos[1]
-        index +=1
+        index += 1
     # print(f"{pos[0]} {pos[1]}  |  {accumulator}")
-    
+
 
 print(f"Accumulator: {accumulator}")

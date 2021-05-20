@@ -7,7 +7,7 @@ for line in sys.stdin:
     values.append(int(line))
 
 # Refreshing my memory on the old DataFrame operations. This is horribly inefficient
-df = pd.DataFrame({"r1":values, "r2":values, "r3":values})
+df = pd.DataFrame({"r1": values, "r2": values, "r3": values})
 temp = [list(df[i].unique()) for i in df.columns]
 df = pd.DataFrame(product(*temp), columns=df.columns)
 df.drop_duplicates(inplace=True)
